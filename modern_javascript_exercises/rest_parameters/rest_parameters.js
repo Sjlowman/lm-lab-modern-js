@@ -1,8 +1,10 @@
 // Instructions can be found in rest_parameters.md
 
-function add(a, b) {
-  // Add a loop here
-  return a + b;
+function add(...args) {
+  return args.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
 }
 
 add(1, 2, 3, 4, 5);
